@@ -435,7 +435,7 @@
 
 .retry__container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   background-color: #000000a0;
