@@ -539,6 +539,11 @@
 
 .buttons__image {
   fill: #4f4f4f;
+  transition: 0.3s;
+}
+
+.buttons__image-active {
+  fill: #ffffff;
 }
 
 .buttons__item:hover .buttons__image {

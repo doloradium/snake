@@ -8,8 +8,8 @@ let down = document.querySelector('#down')
 let left = document.querySelector('#left')
 let loss = document.querySelector('#loss')
 let grid = document.querySelector('.grid')
-let up = document.querySelector('#up')
 let counterBuffer = counter.textContent
+let up = document.querySelector('#up')
 let allowMovement = true
 let spikeValues = []
 let markerTreat
@@ -165,19 +165,35 @@ document.addEventListener('keydown', (e) => {
     if (e.code == 'KeyW' && memory0.bottom != 1 && allowMovement == true) {
         up.classList.add('buttons__item-active')
         memory(0, 1, 0, 0, 0)
-        setTimeout(() => { up.classList.remove('buttons__item-active') }, 200)
+        document.querySelector('#up > * > g > *').classList.add('buttons__image-active')
+        setTimeout(() => {
+            up.classList.remove('buttons__item-active')
+            document.querySelector('#up > * > g > *').classList.remove('buttons__image-active')
+        }, 200)
     } else if (e.code == 'KeyA' && memory0.right != 1 && allowMovement == true) {
         left.classList.add('buttons__item-active')
         memory(0, 0, 0, 1, 0)
-        setTimeout(() => { left.classList.remove('buttons__item-active') }, 200)
+        document.querySelector('#left > * > g > *').classList.add('buttons__image-active')
+        setTimeout(() => {
+            left.classList.remove('buttons__item-active')
+            document.querySelector('#left > * > g > *').classList.remove('buttons__image-active')
+        }, 200)
     } else if (e.code == 'KeyD' && memory0.left != 1 && allowMovement == true) {
         right.classList.add('buttons__item-active')
         memory(0, 0, 0, 0, 1)
-        setTimeout(() => { right.classList.remove('buttons__item-active') }, 200)
+        document.querySelector('#right > * > g > *').classList.add('buttons__image-active')
+        setTimeout(() => {
+            right.classList.remove('buttons__item-active')
+            document.querySelector('#right > * > g > *').classList.remove('buttons__image-active')
+        }, 200)
     } else if (e.code == 'KeyS' && memory0.top != 1 && allowMovement == true) {
         down.classList.add('buttons__item-active')
         memory(0, 0, 1, 0, 0)
-        setTimeout(() => { down.classList.remove('buttons__item-active') }, 200)
+        document.querySelector('#down > * > g > *').classList.add('buttons__image-active')
+        setTimeout(() => {
+            down.classList.remove('buttons__item-active')
+            document.querySelector('#down > * > g > *').classList.remove('buttons__image-active')
+        }, 200)
     }
 })
 
